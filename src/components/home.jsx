@@ -5,14 +5,14 @@ import Product from "./product.jsx"
 
 
 const Home = () => {
-  const [cout,setCout]=useState(1);
+  
   return (
     <>
     <div className="crd">
     {data.foodItems.map((value) => (
-      <Product  id={value.id} brand={value.brand} count={value.count} price={value.price} imgSrc={value.imgSrc} />
+      <Product  key={value.id} id={value.id} brand={value.brand} count={value.count} price={value.price} imgSrc={value.imgSrc} />
     ))}
-    </div>
+    </div>//end
     </>
   );
 }
